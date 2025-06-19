@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Air Traffic Control Quiz</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: white;
+      background-image: url('https://cdn.pixabay.com/photo/2018/05/23/09/39/air-3419398_1280.jpg');
+
+
+
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #000000;
+      user-select: none;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px #000;
+      margin-bottom: 30px;
+      color: #ffdd57;
+    }
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.7);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #ffdd57;
+    }
+    .question {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ffdd57;
+    }
+    .question p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #ffd700;
+      text-shadow: 1px 1px 2px #222;
+    }
+    label {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    label:hover {
+      background-color: #ffdd57;
+      color: #000;
+    }
+    input[type="radio"] {
+      margin-right: 12px;
+      cursor: pointer;
+      accent-color: #ffdd57;
+      transform: scale(1.2);
+      vertical-align: middle;
+    }
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 14px 35px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(45deg, #f39c12, #f1c40f, #e67e22);
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(246, 173, 46, 0.6);
+      cursor: pointer;
+      transition: background 0.4s ease;
+      user-select: none;
+    }
+    button:hover {
+      background: linear-gradient(45deg, #e67e22, #f1c40f, #f39c12);
+      box-shadow: 0 8px 20px rgba(246, 173, 46, 0.9);
+    }
+    #result {
+      max-width: 700px;
+      margin: 20px auto 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 15px 20px;
+      border-radius: 12px;
+      background: rgba(255, 221, 87, 0.85);
+      color: #000;
+      box-shadow: 0 0 12px #ffdd57;
+      user-select: none;
+    }
+    /* Color coding after answer */
+    .correct {
+      background-color: #2ecc71 !important; /* vibrant green */
+      color: #fff !important;
+      font-weight: 700;
+      box-shadow: 0 0 8px #27ae60;
+    }
+    .wrong {
+      background-color: #e74c3c !important; /* bright red */
+      color: #fff !important;
+      font-weight: 700;
+      box-shadow: 0 0 8px #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Air Traffic Control MCQ Quiz</h1>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. What does ATC stand for in aviation?</p>
+      <label><input type="radio" name="q1" value="1"> Air Traffic Control</label>
+      <label><input type="radio" name="q1" value="0"> Automated Terminal Center</label>
+      <label><input type="radio" name="q1" value="0"> Aircraft Technical Command</label>
+    </div>
+
+    <div class="question">
+      <p>2. What is the purpose of a NOTAM?</p>
+      <label><input type="radio" name="q2" value="1"> To inform pilots of hazards or changes</label>
+      <label><input type="radio" name="q2" value="0"> To list crew schedules</label>
+      <label><input type="radio" name="q2" value="0"> To calculate flight times</label>
+    </div>
+
+    <div class="question">
+      <p>3. What does a squawk code identify?</p>
+      <label><input type="radio" name="q3" value="1"> A specific aircraft on radar</label>
+      <label><input type="radio" name="q3" value="0"> The aircraft's flight path</label>
+      <label><input type="radio" name="q3" value="0"> The pilot's license number</label>
+    </div>
+
+    <div class="question">
+      <p>4. Which frequency is used for emergency communication in aviation?</p>
+      <label><input type="radio" name="q4" value="1"> 121.5 MHz</label>
+      <label><input type="radio" name="q4" value="0"> 118.0 MHz</label>
+      <label><input type="radio" name="q4" value="0"> 123.45 MHz</label>
+    </div>
+
+    <div class="question">
+      <p>5. What does "Cleared for takeoff" mean?</p>
+      <label><input type="radio" name="q5" value="1"> The aircraft is authorized to take off</label>
+      <label><input type="radio" name="q5" value="0"> The aircraft can taxi to the gate</label>
+      <label><input type="radio" name="q5" value="0"> The flight plan is rejected</label>
+    </div>
+
+    <div class="question">
+      <p>6. What is the role of a control tower?</p>
+      <label><input type="radio" name="q6" value="1"> Manage traffic on runways and in the immediate airspace</label>
+      <label><input type="radio" name="q6" value="0"> Direct international flights</label>
+      <label><input type="radio" name="q6" value="0"> Maintain aircraft</label>
+    </div>
+
+    <div class="question">
+      <p>7. What does “Roger” mean in aviation communication?</p>
+      <label><input type="radio" name="q7" value="1"> I have received all of your last transmission</label>
+      <label><input type="radio" name="q7" value="0"> I am ready to land</label>
+      <label><input type="radio" name="q7" value="0"> I am requesting weather info</label>
+    </div>
+
+    <div class="question">
+      <p>8. What does "holding pattern" mean?</p>
+      <label><input type="radio" name="q8" value="1"> A maneuver to keep aircraft in a certain area before landing</label>
+      <label><input type="radio" name="q8" value="0"> A flight path for takeoff</label>
+      <label><input type="radio" name="q8" value="0"> A type of fuel configuration</label>
+    </div>
+
+    <div class="question">
+      <p>9. What service does the Area Control Center (ACC) provide?</p>
+      <label><input type="radio" name="q9" value="1"> En-route air traffic control</label>
+      <label><input type="radio" name="q9" value="0"> Ground handling</label>
+      <label><input type="radio" name="q9" value="0"> Aircraft repair</label>
+    </div>
+
+    <div class="question">
+      <p>10. What does "Mayday" indicate?</p>
+      <label><input type="radio" name="q10" value="1"> A distress situation requiring immediate help</label>
+      <label><input type="radio" name="q10" value="0"> A routine check-in</label>
+      <label><input type="radio" name="q10" value="0"> An ATC shift change</label>
+    </div>
+
+    <button type="button" onclick="calculateScore()">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateScore() {
+      let score = 0;
+      const total = 10;
+
+      for (let i = 1; i <= total; i++) {
+        const qName = 'q' + i;
+        const options = document.getElementsByName(qName);
+
+        // Reset classes for labels first
+        options.forEach(opt => {
+          opt.parentElement.classList.remove('correct', 'wrong');
+        });
+
+        const selected = Array.from(options).find(opt => opt.checked);
+
+        if (selected) {
+          if (selected.value === "1") {
+            score++;
+            selected.parentElement.classList.add('correct');
+          } else {
+            selected.parentElement.classList.add('wrong');
+          }
+        }
+
+        // Highlight correct answer
+        options.forEach(opt => {
+          if (opt.value === "1") {
+            opt.parentElement.classList.add('correct');
+          }
+        });
+      }
+
+      document.getElementById('result').innerText = You scored ${score} out of ${total}!;
+    }
+  </script>
+</body>
+</html>
